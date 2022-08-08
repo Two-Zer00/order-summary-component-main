@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700;900&display=swap");
+@import url(normalize.css);
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+  font-family: "Red Hat Display", sans-serif;
+}
+
+p {
+  font-size: 16px;
+}
+
+.attribution {
+  display: none;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url(images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-color: var(--pale-blue);
+}
+
+.card {
+  width: 450px;
+  height: 80%;
+  border-radius: 1rem;
+  box-shadow: 5px 10px 10px 0px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: white;
+}
+
+.card .desc {
+  padding: 40px 40px 0px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+  height: 100%;
+}
+
+.card > div > img {
+  width: 100%;
+}
+
+.card .desc > h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin: 0;
+  color: var(--dark-blue);
+  font-weight: 900;
+}
+.card .desc > p {
+  width: 80%;
+  color: var(--desaturated-blue);
+  text-align: center;
+  line-height: 1.5rem;
+  margin: 0;
+  font-weight: 500;
+}
+
+.card > .desc > div:nth-child(3) {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: var(--very-pale-blue);
+  border-radius: 1rem;
+  box-sizing: border-box;
+  gap: 20px;
+  padding: 10px 20px;
+  height: 80px;
+}
+.card > .desc div:nth-child(3) > div:nth-child(2) {
+  width: 100%;
+}
+.card > .desc div:nth-child(3) > div:nth-child(2) > h2 {
+  font-size: 1rem;
+  color: var(--dark-blue);
+  margin: 5px 0px;
+  font-weight: 900;
+}
+.card > .desc div:nth-child(3) > div:nth-child(2) > p {
+  font-size: 1rem;
+  color: var(--desaturated-blue);
+  margin: 0;
+  font-weight: 500;
+}
+.card > .desc div:nth-child(3) > div:nth-child(3) {
+  width: fit-content;
+}
+.card > .desc div:nth-child(3) > div:nth-child(3) > a {
+  color: var(--bright-blue);
+  font-weight: 600;
+}
+.card > .desc div:nth-child(3) > div:nth-child(3) > a:hover {
+  color: hsla(245, 75%, 52%, 0.7);
+  text-decoration: none;
+}
+.card > .desc div:nth-child(4) {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.card > .desc div:nth-child(4) > button {
+  color: white;
+  border: none;
+  font-weight: 600;
+  background-color: var(--bright-blue);
+  width: 100%;
+  height: 3rem;
+  border-radius: 0.5rem;
+}
+.card > .desc div:nth-child(4) > button:first-child {
+  box-shadow: 5px 10px 20px 0px hsla(245, 75%, 52%, 0.2);
+}
+.card > .desc div:nth-child(4) > button:first-child:hover {
+  background: hsla(245, 75%, 52%, 0.7);
+  cursor: pointer;
+}
+/* hsla(245, 75%, 52%, 0.7) */
+.card > .desc div:nth-child(4) > button:last-child {
+  color: var(--desaturated-blue);
+  background-color: rgba(0, 0, 0, 0);
+  height: 80px;
+}
+
+.card > .desc div:nth-child(4) > button:last-child:hover {
+  color: var(--dark-blue);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 375px) {
+  .card {
+    width: 100%;
+  }
+  body {
+    padding: 0 20px;
+    box-sizing: border-box;
+    background-image: url(images/pattern-background-mobile.svg);
+  }
+  .card .desc {
+    padding: 30px;
+  }
+  .card .desc > h1 {
+    font-size: 1.5rem;
+  }
+  .card .desc > p {
+    width: 90%;
+  }
+  .card > .desc div:nth-child(3) > div:nth-child(2) > h2 {
+    font-size: 1rem;
+  }
+  .card > .desc div:nth-child(3) > div:nth-child(3) > a {
+    font-size: 0.95rem;
+  }
+  .card > .desc div:nth-child(4) > button:last-child {
+    padding-top: 20px;
+    height: fit-content;
+  }
+}
