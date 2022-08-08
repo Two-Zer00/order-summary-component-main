@@ -26,8 +26,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Github](https://your-solution-url.com)
-- Live Site URL: [Live site](https://your-live-site-url.com)
+- Solution URL: [Github](https://github.com/Two-Zer00/order-summary-component-main)
+- Live Site URL: [Live site](https://two-zer00.github.io/order-summary-component-main/)
 
 ## My process
 
